@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>頁尾</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <style>
+    .dropdown-menu[data-bs-popper] {
+      top: 95%;
+      left: -130px;
+      margin-top: var(--bs-dropdown-spacer);
+    }
+
+    li:hover a {
+      /* background-color: aqua; */
+      text-decoration: underline;
+    }
+
+    @media (max-width:991px) {
+      .nav-link {
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid rgb(229, 229, 229);
+      }
+
+      .my-logo {
+        /* background-color: bisque; */
+        display: flex;
+        justify-content: center;
+        padding-left: 50px;
+      }
+    }
+
+    .circle {
+      /* background-color: antiquewhite; */
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+
+    .my-circle {
+      height: 40px;
+      width: 40px;
+    }
+
+    .my-progress {
+      width: calc(100% - 2 * 20px - 4px * 2);
+      height: 10px;
+    }
+
+
+    .img-style {
+      width: 60px;
+      height: 40px;
+    }
+  </style>
+
+<body>
+  <!-- =====================================logo===================================== -->
+  <!-- a 標籤裡面不會再包一個a標籤 -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container ">
+      <a class="navbar-brand" href="#">
+        <img src="./img/logo.jpg" alt="Bootstrap" class="img-style">
+      </a>
+      <!-- =================================nav====================================== -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        arSupportedContent navigation>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">首頁</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">新品上市</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">產品</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">品牌聯名</a>
+          </li>
+          <!-- ====================nav icon============= -->
+          <li class="nav-item">
+            <a href="#" class="nav-link ">
+              <i class="bi bi-bag-fill"></i>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              <i class="bi bi-person"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">登入</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================================中間空白區==================== -->
+  <main>
+    <div class="container p-0">
+      <div class="container-xxl rounded-2 bg-secondary-subtle mt-3 mb-3 px-0 px-sm-2 ">
+        <p class="fs-4 pt-3 ps-3">購物車</p>
+        <div class="container my-5 px-0">
+          <div class="row">
+            <div class="col text-center px-0 mx-0">
+              <div class="w-100 position-relative">
+                <div
+                  class="mx-auto my-circle rounded-circle bg-info text-white d-flex justify-content-center align-items-center">
+                  1
+                </div>
+                <div class="my-progress progress position-absolute top-50 start-100 translate-middle z-3"
+                  role="progressbar">
+                  <div class="progress-bar" style="width: 40%"></div>
+                </div>
+              </div>
+              <div class="my-2"> 確認購物車</div>
+            </div>
+            <div class="col text-center px-0 mx-0">
+              <div class="w-100 position-relative">
+                <div
+                  class="mx-auto my-circle rounded-circle bg-info text-white d-flex justify-content-center align-items-center">
+                  2
+                </div>
+                <div class="my-progress progress position-absolute top-50 start-100 translate-middle z-3"
+                  role="progressbar">
+                  <div class="progress-bar " style="width: 0%"></div>
+                </div>
+              </div>
+              <div class="my-2">付款與運送方式</div>
+            </div>
+            <div class="col text-center px-0 mx-0">
+              <div class="w-100 position-relative">
+                <div
+                  class="mx-auto my-circle rounded-circle bg-info text-white d-flex justify-content-center align-items-center">
+                  3
+                </div>
+                <div class="my-progress progress position-absolute top-50 start-100 translate-middle z-3"
+                  role="progressbar">
+                  <div class="progress-bar " style="width: 0%"></div>
+                </div>
+              </div>
+              <div class="my-2">資料填寫</div>
+            </div>
+            <div class="col text-center px-0 mx-0">
+              <div class="w-100 position-relative">
+                <div
+                  class="mx-auto my-circle rounded-circle bg-info text-white d-flex justify-content-center align-items-center">
+                  4
+                </div>
+              </div>
+              <div class="my-2">完成訂購</div>
+            </div>
+          </div>
+          <hr class="my-3 ">
+          <!-- ==================================訂單明細=================== -->
+           <p class="fs-5 pt-2 ps-4" style="font-weight: bold;">訂單明細</p>
+          <section class="d-flex flex-column align-items-center flex-sm-row justify-content-sm-between">
+              <div class="d-flex flex-column align-items-center flex-sm-row">
+              <img src="./img/5.jpg" class="circle img-fluid img-thumbnail mx-2" alt="...">
+              <div class="">
+                <p class="display-6 pt-3 mb-0" style="font-size: 15px; font-weight: bold;"> Unisex T-shit</p>
+                <p class="text-center text-sm-start">#55698</p>
+              </div>
+            </div>
+              <div class="d-flex flex-column flex-sm-row justify-content-sm-end">
+                <div class="input-group d-flex" style="width:70px;">
+                  <span class="input-group-text p-1" style="cursor: pointer;">-</span>
+                  <input type="text" id="quantity" aria-label="First name" class="form-control pl-1" value="1" min="1">
+                  <span class="input-group-text p-1" style="cursor: pointer;">+</span>
+                </div>
+                <span class="px-2 pt-2">$880</span>
+              </div>
+            </section>
+          <hr class="my-4 ">
+          <!-- ==============================2====================== -->
+           <section class="d-flex flex-column align-items-center flex-sm-row justify-content-sm-between">
+              <div class="d-flex flex-column align-items-center flex-sm-row">
+              <img src="./img/6.jpg" class="circle img-fluid img-thumbnail mx-2" alt="...">
+              <div class="">
+                <p class="display-6 pt-3 mb-0" style="font-size: 15px; font-weight: bold;">Manjuunek Lucky Cat</p>
+                <p class="text-center text-sm-start">#24893</p>
+              </div>
+            </div>
+              <div class="d-flex flex-column flex-sm-row justify-content-sm-end">
+                <div class="input-group d-flex" style="width:70px;">
+                  <span class="input-group-text p-1" style="cursor: pointer;">-</span>
+                  <input type="text" id="quantity" aria-label="First name" class="form-control pl-1" value="1" min="1">
+                  <span class="input-group-text p-1"  style="cursor: pointer;">+</span>
+                </div>
+                <span class="px-2 pt-2">$880</span>
+              </div>
+            </section>
+          <hr class="my-4 ">
+          <!-- ================================價錢======================== -->
+          <section class="d-flex flex-column align-items-end">
+            <div class="d-flex ">
+              <span> 數量：</span>
+              <div style="width: 70px;"> 2</div>
+            </div>
+            <div class="d-flex ">
+              <span> 小計：</span>
+              <div style="width: 70px;"> $1,960</div>
+            </div>
+            <div class="d-flex ">
+              <span> 運費：</span>
+              <div style="width: 70px;"> $45</div>
+            </div>
+            <div class="d-flex ">
+              <span> 總價：</span>
+              <div style="width: 70px;"> $2,005</div>
+            </div>
+          </section>
+          <hr class="my-3 ">
+
+          <section class="main-button d-flex justify-content-between px-3 py-5">
+            <a class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover mt-2"
+              href=""><i class="bi bi-arrow-left"></i>返回購物</a>
+            <a href="./購物車2.html"><button class="button border-info rounded-2 py-2 px-4 bg-info-subtle"
+                type="button">下一步</button>
+            </a>
+          </section>
+  </main>
+
+  <!-- =================================footer============================ -->
+  <footer py-4 py-md-5 mt-5>
+    <div class="container-fluid  bg-secondary-subtle">
+      <div class="row pt-2">
+        <div class="my-logo col-12 col-lg-3 d-flex flex-column align-items-center justify-content-center">
+          <a class="navbar-brand pe-3" href="#">
+            <img src="./img/logo.jpg" alt="Bootstrap" class="img-style">
+            <span class="fw-bolder fst-italic">DANDADANG</span>
+          </a>
+          <div class="text-center mt-2">
+            <span>我們用心挑選每件商品，只為把最溫暖的幸福送到你手中。</span>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-2 mb-3 d-sm-flex flex-sm-column d-sm-flex flex-sm-column">
+          <h5 class="mt-4 text-center">品牌宇宙</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2 text-center ">
+              <a class="link-offset-2 link-underline link-underline-opacity-0 link-hover-underline text-dark ms-2"
+                href="">品牌故事</a>
+            </li>
+            <li class="mb-2 text-center">
+              <a class="text-decoration-none text-dark text-center ms-2" href="">工藝</a>
+            </li>
+            <li class="mb-2 text-center">
+              <a class="text-decoration-none text-dark ms-2" href="">永續承諾</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-2 mb-3 d-sm-flex flex-sm-column">
+          <h5 class="mt-4 text-center">購物指南</h5>
+          <ul class="list-unstyled ">
+            <li class="mb-2 text-center">
+              <a class="text-decoration-none text-dark ms-2" href="">新品上市</a>
+            </li>
+            <li class="mb-2 text-center">
+              <a class="text-decoration-none text-dark ms-2" href="">禮物推薦</a>
+            </li>
+            <li class="mb-2 text-center">
+              <a class="text-decoration-none text-dark ms-2" href="">限定優惠</a>
+            </li>
+            <li class="mb-2 text-center">
+              <a class="text-decoration-none text-dark ms-2" href="">商業合作</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-2 mb-3 d-sm-flex flex-sm-column justify-content-lg-end">
+          <h5 class="mt-4 text-center">聯繫我們</h5>
+          <ul class="list-unstyled ">
+            <li class="mb-2 text-center">
+              <a class="text-decoration-none text-dark ms-2" href="">客服中心</a>
+            </li>
+            <li class="mb-2 text-center">
+              <a class="text-decoration-none text-dark ms-2" href="">門市資訊</a>
+            </li>
+            <li class="mb-2 text-center">
+              <a class="text-decoration-none text-dark ms-2" href="">Q&A</a>
+            </li>
+            <li class="mb-2 text-center">
+              <a class="text-decoration-none text-dark ms-2" href="">客戶回饋</a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="row col-sm-12 col-md-6 col-lg-3 mb-3 d-sm-flex flex-sm-column align-items-center align-items-center">
+          <button type="button" class="mx-auto btn btn-outline-info mt-4 mb-4" style="width: 200px; height: 50px;"> TW / TWD$
+            （中文）</button>
+          <div class="flex text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+              class="bi bi-instagram mr-5" viewBox="0 0 16 16">
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+              class="bi bi-threads-fill" viewBox="0 0 16 16">
+              <path
+                d="M6.81 9.204c0-.41.197-1.062 1.727-1.062.469 0 .758.034 1.146.121-.124 1.606-.91 1.818-1.674 1.818-.418 0-1.2-.218-1.2-.877Z" />
+              <path
+                d="M2.59 16h10.82A2.59 2.59 0 0 0 16 13.41V2.59A2.59 2.59 0 0 0 13.41 0H2.59A2.59 2.59 0 0 0 0 2.59v10.82A2.59 2.59 0 0 0 2.59 16M5.866 5.91c.567-.81 1.315-1.126 2.35-1.126.73 0 1.351.246 1.795.711.443.466.696 1.132.754 1.983q.368.154.678.363c.832.559 1.29 1.395 1.29 2.353 0 2.037-1.67 3.806-4.692 3.806-2.595 0-5.291-1.51-5.291-6.004C2.75 3.526 5.361 2 8.033 2c1.234 0 4.129.182 5.217 3.777l-1.02.264c-.842-2.56-2.607-2.968-4.224-2.968-2.675 0-4.187 1.628-4.187 5.093 0 3.107 1.69 4.757 4.222 4.757 2.083 0 3.636-1.082 3.636-2.667 0-1.079-.906-1.595-.953-1.595-.177.925-.651 2.482-2.733 2.482-1.213 0-2.26-.838-2.26-1.936 0-1.568 1.488-2.136 2.663-2.136.44 0 .97.03 1.247.086 0-.478-.404-1.296-1.426-1.296-.911 0-1.16.288-1.45.624l-.024.027c-.202-.135-.875-.601-.875-.601Z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="" fill="currentColor" class="bi bi-twitter-x"
+              viewBox="0 0 16 16">
+              <path
+                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
