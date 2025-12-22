@@ -342,9 +342,8 @@
           </div>
         </div>
         <!-- -------footer ----- -->
-<div class="bg-info col-sm-12 col-md-6 col-lg-2 mb-3 d-sm-flex flex-sm-column d-sm-flex flex-sm-column">
         <div id="footer-list"
-          class="bg-danger col-sm-12 col-md-6 col-lg-2 mb-3 d-sm-flex flex-sm-column d-sm-flex flex-sm-column">
+          class=" col-sm-12 col-md-6 col-lg-2 mb-3 d-sm-flex flex-sm-column d-sm-flex flex-sm-column">
           <h5 class="mt-4 text-center">品牌宇宙</h5>
           <ul class="list-unstyled">
             <li class="mb-2 text-center ">
@@ -376,7 +375,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-2 mb-3 d-sm-flex flexz-sm-column d-sm-flex flex-sm-column">
+        <div class="col-sm-12 col-md-6 col-lg-2 mb-3 d-sm-flex flex-sm-column d-sm-flex flex-sm-column">
           <h5 class="mt-4 text-center">聯繫我們</h5>
           <ul class="list-unstyled ">
             <li class="mb-2 text-center">
@@ -393,7 +392,7 @@
             </li>
           </ul>
         </div>
-</div>
+
 
         <div
           class="row col-sm-12 col-md-6 col-lg-3 mb-3 d-sm-flex flex-sm-column align-items-center align-items-center">
@@ -419,7 +418,7 @@
                 d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
             </svg>
           </div>
-        </div> -->
+        </div>
       </div>
     </div>
     </div>
@@ -432,79 +431,78 @@
     let cards = [
       {
         img: './img/7.jpg',
-        smallTitle: '限量版公仔',
+        smallTitle: '限量版高速婆婆',
         description: '這款「告訴婆婆」公仔以精緻細節呈現角色魅力，造型可愛又逗趣，無論收藏或擺飾都超療癒，是粉絲必收的限定周邊！',
-        price: '售價： $2,400',
+        price: '$2,400',
       },
       {
         img: './img/8.jpg',
-        smallTitle: '限量版公仔',
+        smallTitle: '限量版金蛋蛋',
         description: '「金蛋蛋」以亮面金屬質感打造，造型圓潤討喜、擺著就能招好運。小巧可愛、細節精緻，是桌上最療癒的幸運小公仔，收藏送禮都超適合！',
-        price: '售價： $1,980',
+        price: ' $1,980',
       },
       {
         img: './img/9.jpg',
-        smallTitle: '限量版公仔',
+        smallTitle: '限量版人偶',
         description: '我們的「全部角色」系列公仔以高品質呈現，每款都精細還原角色特色與表情。造型可愛、質感優秀，一次收藏全套更完整、更有成就感，是粉絲不可錯過的必收系列！',
-        price: '售價： $3,600',
+        price: '$3,600',
       }
     ]
     const cardlist = document.querySelector('#card-list')
 
     cards.forEach((item) => {
       cardlist.innerHTML += `
-        <div class="bg-secondary-subtle d-flex px-0 m-3" style="width: 450px; height: 300px;">
-          <img style="width: 200px; height: 300px;" src="${item.img}" alt="">
+        <div class="bg-secondary-subtle d-flex px-0 m-3" style="width: 450px; height: 350px;">
+          <img style="width: 200px; height: 350px;" src="${item.img}" alt="">
             <span class="p-4 d-flex flex-column justify-content-between">
               <div class="text-danger">${item.smallTitle}</div>
               <div>${item.description}</div>
-              <h3>${item.price}</h3>
+              <h3>售價：${item.price}</h3>
+               <div>
+         <button style="width: 200px; height: 50px" class="rounded bg-warning-subtle border-0 shopping-btn" type="button" data-shppingname="${item.smallTitle}">加入購物車
+              <i class="fa-solid fa-arrow-right mt-1 mx-1"></i> </button>
+        </div>
             </span>
         </div>`
     });
-    let footers = [
-      {
-        title: '品牌宇宙',
-        subTitle1: '品牌故事',
-        subTitle2: '工藝',
-        subTitle3: '永續承諾',
-        subTitle4: '',
-      },
- {
-        title: '購物指南',
-        subTitle1: '新品上市',
-        subTitle2: '禮物推薦',
-        subTitle3: '限定優惠',
-        subTitle4: '商業合作',
-      },
-       {
-        title: '聯繫我們',
-        subTitle1: '客服中心',
-        subTitle2: '門市資訊',
-        subTitle3: 'Q&A',
-        subTitle4: '客戶回饋',
-      },
-    ]
-    const footerList = document.querySelector('#footer-list')
-    footers.forEach((item) => {
-      footerList.innerHTML += `
-       <div id="footer-list"class="col-sm-12 col-md-6 col-lg-2 mb-3 d-sm-flex flex-sm-column d-sm-flex flex-sm-column">
-          <h5 class="mt-4 text-center">${item.title}</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2 text-center ">
-              <a class="link-offset-2 link-underline link-underline-opacity-0 link-hover-underline text-dark ms-2"
-                href="">${item.subTitle1}</a>
-            </li>
-            <li class="mb-2 text-center">
-              <a class="text-decoration-none text-dark text-center ms-2" href="">${item.subTitle2}</a>
-            </li>
-            <li class="mb-2 text-center">
-              <a class="text-decoration-none text-dark ms-2" href="">${item.subTitle3}</a>
-            </li>
-          </ul>
-          </div>
-`
+
+
+    // localStorage
+    //把資料新新增到儲存，後續在別的頁面可以下載下來用
+    localStorage.setItem('cards', JSON.stringify(cards));
+
+    //把在首頁選到的產品記錄起來
+    //1.按鈕需要可以點擊
+    let shoppingBtns = document.querySelectorAll('.shopping-btn');
+    let shopping = [];
+    localStorage.setItem('shopping', '' );//預設會到首頁的時候會清空資料
+    //2.點擊之後我們要找到被點擊的資料細節
+    shoppingBtns.forEach((item) => {
+      //加了 data-shppingName="${item.smallTitle}以後，按下按鈕之後他就知道我們要取哪一個物品
+      console.log(item.dataset.shppingname);
+      item.addEventListener('click', function () {
+        //console.log('click', item.dataset.shppingname);//點擊到的是就會show出名稱
+
+        //3.把點到的東西紀錄起來-陣列來儲存
+        // shopping.push(item.dataset.shppingname)
+        // console.log(shopping);
+
+        // //4.判斷是否有重複，如果被重複選擇只需要出現一次(include)
+        // console.log(shopping.includes(item.dataset.shppingname));
+
+        // 5.先判斷裡面有沒有重複的資料
+        if (!shopping.includes(item.dataset.shppingname)) {
+          shopping.push(item.dataset.shppingname)
+          //先判斷裡面有沒有相同的名字了，沒有的話就push進去
+          console.log(shopping);
+        }
+        // 6.把點選到的資料儲存，到另一個頁面下載
+        localStorage.setItem('shopping', JSON.stringify(shopping) )
+      })
     });
+
+
+
 
   </script>
 </body>

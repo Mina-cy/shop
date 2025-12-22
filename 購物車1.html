@@ -37,8 +37,8 @@
 
     .circle {
       /* background-color: antiquewhite; */
-      width: 80px;
-      height: 80px;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
     }
 
@@ -163,44 +163,46 @@
           </div>
           <hr class="my-3 ">
           <!-- ==================================訂單明細=================== -->
-           <p class="fs-5 pt-2 ps-4" style="font-weight: bold;">訂單明細</p>
-          <section class="d-flex flex-column align-items-center flex-sm-row justify-content-sm-between">
-              <div class="d-flex flex-column align-items-center flex-sm-row">
+          <p class="fs-5 pt-2 ps-4" style="font-weight: bold;">訂單明細</p>
+          <div id="shopping-List">
+            <!-- <section class="d-flex flex-column align-items-center flex-sm-row justify-content-sm-between">
+            <div class="d-flex flex-column align-items-center flex-sm-row">
               <img src="./img/5.jpg" class="circle img-fluid img-thumbnail mx-2" alt="...">
               <div class="">
-                <p class="display-6 pt-3 mb-0" style="font-size: 15px; font-weight: bold;"> Unisex T-shit</p>
+                <p class="display-6 pt-3 mb- 0" style="font-size: 15px; font-weight: bold;"> Unisex T-shit</p>
                 <p class="text-center text-sm-start">#55698</p>
               </div>
             </div>
-              <div class="d-flex flex-column flex-sm-row justify-content-sm-end">
-                <div class="input-group d-flex" style="width:70px;">
-                  <span class="input-group-text p-1" style="cursor: pointer;">-</span>
-                  <input type="text" id="quantity" aria-label="First name" class="form-control pl-1" value="1" min="1">
-                  <span class="input-group-text p-1" style="cursor: pointer;">+</span>
-                </div>
-                <span class="px-2 pt-2">$880</span>
+            <div class="d-flex flex-column flex-sm-row justify-content-sm-end">
+              <div class="input-group d-flex" style="width:70px;">
+                <span class="input-group-text p-1" style="cursor: pointer;">-</span>
+                <input type="text" id="quantity" aria-label="First name" class="form-control pl-1" value="1" min="1">
+                <span class="input-group-text p-1" style="cursor: pointer;">+</span>
               </div>
-            </section>
-          <hr class="my-4 ">
-          <!-- ==============================2====================== -->
-           <section class="d-flex flex-column align-items-center flex-sm-row justify-content-sm-between">
-              <div class="d-flex flex-column align-items-center flex-sm-row">
+              <span class="px-2 pt-2">$880</span>
+            </div>
+          </section>
+          <hr class="my-4 "> -->
+            <!-- ==============================2====================== -->
+            <!-- <section class="d-flex flex-column align-items-center flex-sm-row justify-content-sm-between">
+            <div class="d-flex flex-column align-items-center flex-sm-row">
               <img src="./img/6.jpg" class="circle img-fluid img-thumbnail mx-2" alt="...">
               <div class="">
                 <p class="display-6 pt-3 mb-0" style="font-size: 15px; font-weight: bold;">Manjuunek Lucky Cat</p>
                 <p class="text-center text-sm-start">#24893</p>
               </div>
             </div>
-              <div class="d-flex flex-column flex-sm-row justify-content-sm-end">
-                <div class="input-group d-flex" style="width:70px;">
-                  <span class="input-group-text p-1" style="cursor: pointer;">-</span>
-                  <input type="text" id="quantity" aria-label="First name" class="form-control pl-1" value="1" min="1">
-                  <span class="input-group-text p-1"  style="cursor: pointer;">+</span>
-                </div>
-                <span class="px-2 pt-2">$880</span>
+            <div class="d-flex flex-column flex-sm-row justify-content-sm-end">
+              <div class="input-group d-flex" style="width:70px;">
+                <span class="input-group-text p-1" style="cursor: pointer;">-</span>
+                <input type="text" id="quantity" aria-label="First name" class="form-control pl-1" value="1" min="1">
+                <span class="input-group-text p-1" style="cursor: pointer;">+</span>
               </div>
-            </section>
-          <hr class="my-4 ">
+              <span class="px-2 pt-2">$880</span>
+            </div>
+          </section>
+          <hr class="my-4 "> -->
+          </div>
           <!-- ================================價錢======================== -->
           <section class="d-flex flex-column align-items-end">
             <div class="d-flex ">
@@ -295,7 +297,8 @@
         </div>
         <div
           class="row col-sm-12 col-md-6 col-lg-3 mb-3 d-sm-flex flex-sm-column align-items-center align-items-center">
-          <button type="button" class="mx-auto btn btn-outline-info mt-4 mb-4" style="width: 200px; height: 50px;"> TW / TWD$
+          <button type="button" class="mx-auto btn btn-outline-info mt-4 mb-4" style="width: 200px; height: 50px;"> TW /
+            TWD$
             （中文）</button>
           <div class="flex text-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
@@ -324,6 +327,142 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
     </script>
+
+
+
+  <!-- 1.抓取資料，新增資料。
+   let shoppingData = localStorage.getItem('cards');
+   console.log(localStorage.getItem('cards'));
+
+  2.把JSON資料轉成陣列或物件
+   console.log(JSON.parse(shoppingData))
+   let shoppingItem = JSON.parse(shoppingData)//等於被轉換成物件的結果
+
+  3.抓取要放的位置
+   const shoppingList = document.querySelector('#shopping-List')
+  4.跑迴圈
+   shoppingItem.forEach((item) => {
+   shoppingList.innerHTML += `
+  // <section class="d-flex flex-column align-items-center flex-sm-row justify-content-sm-between">
+    // <div class="d-flex flex-column align-items-center flex-sm-row">
+      // <img src="./img/6.jpg" class="circle img-fluid img-thumbnail mx-2" alt="...">
+      // <div class="">
+        // <p class="display-6 pt-3 mb-0" style="font-size: 15px; font-weight: bold;">Manjuunek Lucky Cat</p>
+        // <p class="text-center text-sm-start">#24893</p>
+        // </div>
+      // </div>
+    // <div class="d-flex flex-column flex-sm-row justify-content-sm-end">
+      // <div class="input-group d-flex" style="width:70px;">
+        // <span class="input-group-text p-1" style="cursor: pointer;">-</span>
+        // <input type="text" id="quantity" aria-label="First name" class="form-control pl-1" value="1" min="1">
+        // <span class="input-group-text p-1" style="cursor: pointer;">+</span>
+        // </div>
+      // <span class="px-2 pt-2">$880</span>
+      // </div>
+    // </section>
+  //
+  <hr class="my-4 ">
+  // `
+   }); -->
+
+  <script>
+    // 把產品放入購物車
+    // 1. 取得上一頁被點選的資料還有這一頁的顯示區域
+    let shoppingData = JSON.parse(localStorage.getItem('cards'));
+    let shopping = JSON.parse(localStorage.getItem('shopping'));
+    // console.log(shoppingData, shopping);
+
+    // 2.取得商品清單跟購物車有相關的東西取出來
+    let nowshopping = shoppingData.filter((item) => {
+      item['total'] = 1;
+      if (shopping.includes(item.smallTitle)) {
+        console.log(item.smallTitle);
+        return item
+      }
+    });
+    console.log(nowshopping);
+
+    // 3.抓取要放的位置
+    const shoppingList = document.querySelector('#shopping-List');
+
+    // 4.跑迴圈
+    nowshopping.forEach((item) => {
+      shoppingList.innerHTML += `
+    <section class="d-flex flex-column align-items-center flex-sm-row justify-content-sm-between">
+    <div class="d-flex flex-column align-items-center flex-sm-row">
+       <img src="${item.img}" class="circle img-fluid img-thumbnail mx-2" alt="...">
+         <div class="">
+          <p class="display-6 pt-3 mb-0" style="font-size: 15px; font-weight: bold;">${item.smallTitle}</p>
+          <p class="text-center text-sm-start">#24893</p>
+         </div>
+       </div>
+      <!-- 右側：控制項和價格 -->
+    <div class="d-flex flex-column flex-sm-row align-items-center">
+        <!-- 數量控制 -->
+        <div class="d-flex align-items-center mb-2 mb-sm-0 me-sm-3">
+            <button class="btn btn-sm btn-outline-secondary px-2 py-0 btn-down">-</button>
+            <input type="text" 
+                   class="form-control form-control-sm text-center mx-1" 
+                   value="${item.total}" 
+                   style="width: 40px;"
+                   data-shoppingname="${item.title}">
+            <button class="btn btn-sm btn-outline-secondary px-2 py-0 btn-up">+</button>
+        </div>
+        
+        <!-- 價格 -->
+        <span class="fw-bold"> ${item.price} </span>
+    </div>
+</section>
+<hr class="my-2"> `
+    });
+
+    //5.加減符號要控制力main的價格還有總金額
+    let btnDown = document.querySelectorAll('.btn-down');//在按鈕裡面的class加上一個才能再設置addEventListener來控制
+
+    // console.log(btnUp);
+
+    btnDown.forEach((item) => {
+      //加減符號按完要連動到裡面的輸入欄位
+      item.addEventListener('click', () => {
+        let down = item.parentNode.children[1].value;
+        //如果大於一才能夠減
+        if (item.parentNode.children[1].value > 1) {
+          //減號按鈕每被按一次框框裡面的值就要減去一
+          down--;
+          //先回到上一層找到輸入框在哪一個，再找子層裡面的第【】個內容。
+          // console.log(item.parentNode.children[1]);
+        }
+        // 找到陣列裡面的資料進行更新
+        nowshopping = nowshopping.filter((changeItem) => {
+          if (changeItem.title == item.parentNode.children[1].dataset.shoppingname) {
+            changeItem['total'] = down;
+            item.parentNode.children[1].value = down;
+          }
+          return hangeItem;
+        });
+        // console.log(nowshopping);
+
+      })
+    });
+
+    let btnUp = document.querySelectorAll(".btn-up");
+        btnUp.forEach((item) => {
+            item.addEventListener('click', () => {
+                let up = item.parentNode.children[1].value;
+                up++;
+                // 找到陣列裡面的資料進行更新
+                let nowshopping01 = nowshopping.filter((changeItem) => {
+                    // 更新的資料與沒有更新的資料進行回傳
+                    判斷名稱是否一樣把資料進行更新
+                    if (changeItem.title == item.parentNode.children[1].dataset.shoppingname) {
+                        changeItem['total'] = up;
+                        item.parentNode.children[1].value = up;
+                    }
+                    return changeItem;
+                });
+            });
+        });
+  </script>
 </body>
 
 </html>
